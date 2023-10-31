@@ -1,0 +1,61 @@
+
+<---------- Start req /user/greetings/hello ---------->
+
+Hello user Doe
+
+<------ Audit ----->
+
+Audit report:
+  Meta: {
+  createdAt: 2023-10-31T07:29:00.609Z,
+  origin: "tablet",
+  user: {
+    name: "John"
+  }
+}
+  Events: [
+  {
+    createdAt: 2023-10-31T07:29:00.609Z,
+    event: "user.greeting.hello",
+    name: "Doe"
+  }
+]
+
+<----------- End req /user/greetings/hello ----------->
+
+
+<---------- Start req /user/greetings/hello-to-pet ---------->
+
+User Wick says:
+Hello pet rex
+
+<------ Audit ----->
+
+Audit report:
+  Meta: {
+  createdAt: 2023-10-31T07:29:00.609Z,
+  origin: "celular",
+  user: {
+    name: "Wick"
+  }
+}
+  Events: [
+  {
+    createdAt: 2023-10-31T07:29:00.609Z,
+    event: "user.pet.hello",
+    pet: "rex",
+    user: "Wick"
+  }, {
+    createdAt: 2023-10-31T07:29:00.609Z,
+    event: "pet.greetings.helloFromUser",
+    name: "rex",
+    user: "Wick"
+  }, {
+    createdAt: 2023-10-31T07:29:00.609Z,
+    event: "pet.greetings.hello",
+    name: "rex"
+  }
+]
+
+<----------- End req /user/greetings/hello-to-pet ----------->
+
